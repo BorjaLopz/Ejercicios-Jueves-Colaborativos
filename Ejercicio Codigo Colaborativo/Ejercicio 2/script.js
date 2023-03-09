@@ -26,7 +26,6 @@ function guessIsInSentence(_char, _frase)
     }
 
     return false;
-
 }
 
 function askLetter()
