@@ -29,11 +29,32 @@ function askNumberToSlice(_startNumber, _finishNumber, _frase)
 
 console.log(frase);
 
-let posicionInicial = Number(prompt(`Introduce por donde quieres cortar la cadena inicial \"${frase}\"`));
+// let posicionInicial = Number(prompt(`Introduce por donde quieres cortar la cadena inicial \"${frase}\"`));
 
-let posicionFinal = Number(prompt(`Introduce por donde quieres cortar la cadena final \"${frase}\"`));
+// let posicionFinal = Number(prompt(`Introduce por donde quieres cortar la cadena final \"${frase}\"`));
 
-console.log(posicionInicial);
-console.log(posicionFinal);
+// console.log(posicionInicial);
+// console.log(posicionFinal);
 
-askNumberToSlice(posicionInicial, posicionFinal, frase);
+// askNumberToSlice(posicionInicial, posicionFinal, frase);
+
+
+/////////////////////////////
+
+/* SOLUCION DE ZOE */
+
+let string = "Vendo Opel Corsa";
+
+function contarString(string)
+{
+    let start = prompt(`Introduce un numero del 0 al ${string.length}`);
+
+    let end = prompt(`Introduce un numero del 0 al ${string.length}`);
+
+    let trozo = string.slice(start, end);
+
+    console.log(trozo);
+}
+
+contarString(string);
+

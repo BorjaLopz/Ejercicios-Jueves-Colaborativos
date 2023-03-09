@@ -1,3 +1,5 @@
+"use strict";
+
 /*
 Comprueba si la letra que indica el usuario se encuentra en alguna de las siguientes palabras:
 
@@ -26,8 +28,54 @@ function guessIsInSentence(_char, _frase)
     return false;
 
 }
-console.log(getSentence(Frutas));
 
-let userChar = prompt("Introduce un cáracter: ")
+function askLetter()
+{   
+    let char_;
 
-console.log(guessIsInSentence(userChar, Frutas));
+    //Repetimos el pedir el caracter por si el caracter que nos pasa esta vacio
+    do
+    {
+        char_ = prompt("Introduce un caracter: ");
+        console.log("Char: " + char_)
+
+    }while(char_ === "")
+
+    return char_;
+}
+
+// console.log(getSentence(Frutas));
+
+// let userChar = askLetter();
+
+// console.log(guessIsInSentence(userChar, Frutas));
+
+
+/////////////////////////////
+
+/* SOLUCION DE ZOE */
+
+function letraPalabra(palabra, letra)
+{
+    return palabra.indexOf(letra) !== -1;
+
+    //Nos devuelve -1 en caso de que no este
+    // return palabra.includes(letra);
+}
+
+function letraArrayPalabras(array)
+{
+    let letra = prompt("Introduce una letra: ");
+
+    for(let fruta of Frutas)
+    {
+        console.log(letraPalabra(fruta, letra));
+        if(letraPalabra(fruta, letra))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log(letraArrayPalabras(Frutas))
